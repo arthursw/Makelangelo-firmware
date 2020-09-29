@@ -19,8 +19,8 @@
 
 
 // choose one of the following
-//#define NORMAL_MOTOR_STEPS   200  // 1.8 degrees per step
-#define NORMAL_MOTOR_STEPS   400  // 0.9 degrees per step
+#define NORMAL_MOTOR_STEPS   200  // 1.8 degrees per step
+// #define NORMAL_MOTOR_STEPS   400  // 0.9 degrees per step
 
 
 #define MACHINE_HAS_LIFTABLE_PEN
@@ -74,7 +74,7 @@
 #ifndef MAX_SEGMENTS
 #define MAX_SEGMENTS         (32)
 #endif
-#define USE_LIMIT_SWITCH
+// #define USE_LIMIT_SWITCH
 #define HAS_SD
 #define HAS_LCD
 #endif
@@ -82,17 +82,17 @@
 #ifndef MAX_SEGMENTS
 #define MAX_SEGMENTS         (32)
 #endif
-#define USE_LIMIT_SWITCH
+// #define USE_LIMIT_SWITCH
 #define HAS_SD
 #define HAS_LCD
 #endif
 #if MACHINE_HARDWARE_VERSION == MAKELANGELO_6
 #ifndef MAX_SEGMENTS
-#define MAX_SEGMENTS         (16)
+#define MAX_SEGMENTS         (32)
 #endif
-#define USE_LIMIT_SWITCH
-#define HAS_TMC2130  // driver type
-#define STEALTHCHOP  // quiet operation
+// #define USE_LIMIT_SWITCH
+// #define HAS_TMC2130  // driver type
+// #define STEALTHCHOP  // quiet operation
 #define HAS_SD
 #define HAS_LCD
 #endif
@@ -120,13 +120,13 @@
 // note that some boards have dip switches or jumpers that can be activated to turn stepping on and off.
 // make sure your dip switch settings match the firmware value.
 #ifndef MICROSTEPS
-#define MICROSTEPS           (16.0)
+#define MICROSTEPS           (32.0)
 #endif
 
 // Marginallyclever.com uses GT2 timing belt, which has 2mm teeth.
 // We also use GT2-20 pulleys which have 20 teeth.
 // 20*2 means the pitch is 40.
-#define PULLEY_PITCH         (40.0)
+#define PULLEY_PITCH         (95.0)
 
 // These numbers are calculated from the above.  No need to change these.
 #ifndef NORMAL_MOTOR_STEPS

@@ -400,16 +400,20 @@ void calibrationToPosition() {
 void makelangelo6Setup() {
   // if you accidentally upload m3 firmware to an m5 then upload it ONCE with this line uncommented.
   float limits[NUM_AXIES * 2];
-  limits[0] = 707.5 / 2;
-  limits[1] = -707.5 / 2;
-  limits[2] = 500;
-  limits[3] = -500;
+  float machineWidth = 1764.0;
+  float machineHomeToTop = 260+360+500;
+  float machineHomeToBottom = 1000;
+  limits[0] = machineWidth/2.0;
+  limits[1] = -machineWidth/2.0;
+  limits[2] = machineHomeToTop;
+  limits[3] = -machineHomeToBottom;
   limits[4] = PEN_UP_ANGLE;
   limits[5] = PEN_DOWN_ANGLE;
   eeprom.adjustLimits(limits);
 
-  calibrateLeft = 1025;
-  calibrateRight = 1025;
+  float beltLenght = sqrt(limits[0]*limits[0]+limits[2]*limits[2]);
+  calibrateLeft = beltLenght;
+  calibrateRight = beltLenght;
   eeprom.saveCalibration();
   calibrationToPosition();
   
@@ -428,16 +432,20 @@ void makelangelo6Setup() {
 void makelangelo5Setup() {
   // if you accidentally upload m3 firmware to an m5 then upload it ONCE with this line uncommented.
   float limits[NUM_AXIES * 2];
-  limits[0] = 325.0;
-  limits[1] = -325.0;
-  limits[2] = 500;
-  limits[3] = -500;
+  float machineWidth = 1764.0;
+  float machineHomeToTop = 260+360+500;
+  float machineHomeToBottom = 1000;
+  limits[0] = machineWidth/2.0;
+  limits[1] = -machineWidth/2.0;
+  limits[2] = machineHomeToTop;
+  limits[3] = -machineHomeToBottom;
   limits[4] = PEN_UP_ANGLE;
   limits[5] = PEN_DOWN_ANGLE;
   eeprom.adjustLimits(limits);
 
-  calibrateLeft = 1025;
-  calibrateRight = 1025;
+  float beltLenght = sqrt(limits[0]*limits[0]+limits[2]*limits[2]);
+  calibrateLeft = beltLenght;
+  calibrateRight = beltLenght;
   eeprom.saveCalibration();
   calibrationToPosition();
   

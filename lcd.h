@@ -64,7 +64,7 @@
 #define ENCROT3            1
 
 #define LCD_MESSAGE_LENGTH (LCD_HEIGHT * LCD_WIDTH + 1)  // we have two lines of 20 characters avialable in 7.16
-#define LCD_DRAW_DELAY     (100)
+#define LCD_DRAW_DELAY     (500)
 #define LCD_TURN_PER_MENU  (3)  // was 5
 #define M117_MAX_LEN       (LCD_MESSAGE_LENGTH/2)
 

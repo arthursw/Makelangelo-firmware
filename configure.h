@@ -27,6 +27,7 @@
 #define SIXI             9  // 6DOF robot arm.
 #define TRADITIONAL6    10  // 6 axis machine, no restrictions.
 #define SCARA           11  // 2 axis SCARA.
+#define MICROSTEPS      32
 
 // default value
 #define MACHINE_STYLE POLARGRAPH
@@ -40,7 +41,7 @@
 #define LCD_IS_SMART   2  // reprapdiscount Smart LCD Controller (including XXL model)
 
 // default value
-#define LCD_TYPE LCD_IS_SMART
+#define LCD_TYPE LCD_IS_128X64
 
 //------------------------------------------------------------------------------
 // Microcontrollers supported
@@ -55,7 +56,7 @@
 #define BOARD_CNCV3        7  // Mega2560 + CNC Shield v3
 
 // default value
-#define MOTHERBOARD BOARD_RUMBA
+#define MOTHERBOARD BOARD_RAMPS
 
 //------------------------------------------------------------------------------
 // YOUR CHANGES GO HERE

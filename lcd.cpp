@@ -394,6 +394,11 @@ void LCD_this_is_home() {
   MENU_POP();
 }
 
+void LCD_set_home() {
+  setHome(offset[NUM_AXIES]);
+  MENU_POP();
+}
+
 
 void LCD_go_home() {
   float homes[NUM_AXIES];
@@ -862,6 +867,7 @@ void LCD_main_menu() {
     MENU_ACTION("Find home", LCD_find_home);
 #else
     MENU_ACTION("This is home", LCD_this_is_home);
+    MENU_ACTION("Set home", LCD_set_home);
     MENU_ACTION("Go home", LCD_go_home);
 #endif
 #ifdef HAS_SD

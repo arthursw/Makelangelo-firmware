@@ -151,7 +151,7 @@ uint16_t Gripper::crc16_update(uint16_t crc, uint8_t a) {
 
 
 void Gripper::setup() {
-  Serial.begin(57600);
+  Serial.begin(115200);
   gripperSerial.begin(GRIPPER_BAUD);
   sendActionRequest(0);
   delay(5);
