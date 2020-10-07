@@ -395,7 +395,9 @@ void LCD_this_is_home() {
 }
 
 void LCD_set_home() {
-  setHome(offset[NUM_AXIES]);
+  float pos[NUM_AXIES];
+  for(ALL_AXIES(i)) pos[i] = axies[i].pos;
+  setHome(pos);
   MENU_POP();
 }
 
