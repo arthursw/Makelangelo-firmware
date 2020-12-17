@@ -544,7 +544,7 @@ void LCD_start_menu() {
     root.close();
     MENU_END
    
-    lcd_dirty=0;
+    //lcd_dirty=0;
   }
   
 #else
